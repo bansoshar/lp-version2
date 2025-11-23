@@ -1,10 +1,14 @@
-// Geistフォントのimportを削除するため、このファイル全体を修正します
-
 import './globals.css';
-import React from 'react';
-// import { Inter } from 'next/font/google'; // デフォルトのInterも使用しない
+import type { Metadata } from 'next';
 
-// export const metadata = { ... } は一旦そのまま残すか、削除して問題ありません。
+// メタデータの設定
+export const metadata: Metadata = {
+  title: 'ナカイマ伴走舎｜ライフ＆ストレングス コーチング',
+  description: 'あなたの「強み」と「願い」に光をあて、迷いのない決断をつくるコーチング。',
+  icons: {
+    icon: '/favicon.ico', // または '/icon.png'
+  },
+};
 
 export default function RootLayout({
   children,
@@ -13,8 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      {/* <body>のクラスから、フォントのクラス指定（例: className={inter.className}）を削除します */}
-      <body>{children}</body> 
+      <body>{children}</body>
     </html>
   );
 }
