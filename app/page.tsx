@@ -176,11 +176,23 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="font-serif text-5xl lg:text-7xl font-bold leading-tight tracking-wide text-[#223a5e] mb-8"
+              className="
+                font-serif
+                text-3xl       /* スマホ（〜640px） */
+                sm:text-4xl    /* 小さめ端末 */
+                md:text-5xl    /* タブレット以上で従来サイズ */
+                lg:text-7xl    /* PC大きめでは大きく魅せる */
+                font-bold
+                leading-tight
+                tracking-wide
+                text-[#223a5e]
+                mb-8
+              "
             >
               <span className="inline-phrase">もっと自然に、</span><br />
               <span className="inline-phrase">もっと自分らしく。</span>
             </motion.h1>
+
             
             <motion.div 
               initial={{ scaleX: 0 }}
