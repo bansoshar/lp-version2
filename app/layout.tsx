@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'ナカイマ伴走舎｜ライフ＆ストレングス コーチング',
   description: 'あなたの「強み」と「願い」に光をあて、迷いのない決断をつくるコーチング。',
   icons: {
-    icon: '/favicon.ico', // または '/icon.png'
+    icon: '/icon.png', // または '/icon.png'
   },
 };
 
