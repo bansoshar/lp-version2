@@ -27,26 +27,32 @@ const SectionHeader = ({ en, jp, align = "center" }: { en: string; jp: string; a
   </div>
 );
 
-const ParallaxImage = ({ src, alt, className, speed = 1 }: { src: string; alt: string; className?: string; speed?: number }) => {
+const ParallaxImage = ({
+  src,
+  alt,
+  className = "",
+  speed = 1,
+}: { src: string; alt: string; className?: string; speed?: number }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-  
+
   return (
-    <div ref={ref} className={`overflow-hidden ${className}`}>
-      <motion.img 
+    <div ref={ref} className="overflow-hidden w-full h-full">
+      <motion.img
         style={{ y: speed === 0 ? 0 : y, scale: 1.1 }}
-        src={src} 
-        alt={alt} 
-        className="w-full h-full object-cover object-top"
+        src={src}
+        alt={alt}
+        className={`w-full h-full object-cover ${className}`}
       />
     </div>
   );
 };
+
 
 const MagneticButton = ({ children, onClick, dark = true }: { children: React.ReactNode; onClick: () => void; dark?: boolean }) => (
   <button 
@@ -170,6 +176,7 @@ export default function Home() {
 
       {/* --- Hero Section --- */}
       <header className="relative h-screen min-h-[800px] w-full flex flex-col md:flex-row overflow-hidden">
+        {/* 左：テキストエリア（無地） */}
         <div className="w-full md:w-1/2 h-full relative flex items-center justify-center p-10 md:p-20 bg-[var(--color-paper)] z-10">
           <div className="relative w-full max-w-lg">
             <motion.h1 
@@ -178,10 +185,10 @@ export default function Home() {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="
                 font-serif
-                text-3xl       /* スマホ（〜640px） */
-                sm:text-4xl    /* 小さめ端末 */
-                md:text-5xl    /* タブレット以上で従来サイズ */
-                lg:text-7xl    /* PC大きめでは大きく魅せる */
+                text-2xl        /* スマホ */
+                sm:text-3xl     /* 小さめ端末 */
+                md:text-4xl     /* タブレット */
+                lg:text-7xl     /* PC：少し抑えめ */
                 font-bold
                 leading-tight
                 tracking-wide
@@ -189,11 +196,11 @@ export default function Home() {
                 mb-8
               "
             >
+              <span className="inline-phrase">迷いのない決断は、</span><br />
               <span className="inline-phrase">もっと自然に、</span><br />
-              <span className="inline-phrase">もっと自分らしく。</span>
+              <span className="inline-phrase">自分らしく。</span>
             </motion.h1>
 
-            
             <motion.div 
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -207,8 +214,9 @@ export default function Home() {
               transition={{ delay: 0.8, duration: 1 }}
               className="text-base md:text-lg lg:text-xl text-gray-600 leading-loose tracking-widest mb-12"
             >
-              <span className="inline-block">あなたの「強み」と「願い」に光をあて、</span><br className="hidden md:inline" />
-              <span className="inline-block">迷いのない決断をつくる</span>
+              <span className="inline-block">「誰かの期待」より、「自分の本音」を。</span><br className="hidden md:inline" />
+              <span className="inline-block">
+              強みと願いを軸に、納得の一歩へ。</span>
             </motion.p>
 
             <motion.div 
@@ -216,20 +224,24 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2 }}
             >
-               <MagneticButton onClick={openForm}>Experience Session</MagneticButton>
+              <MagneticButton onClick={openForm}>Experience Session</MagneticButton>
             </motion.div>
           </div>
         </div>
+
+        {/* 右：海の写真（右寄せ） */}
         <div className="w-full md:w-1/2 h-[50vh] md:h-full relative">
-          <ParallaxImage 
-            src="/hero.jpg" 
+          <ParallaxImage
+            src="/hero.jpg"
             alt="Calm Ocean"
-            className="w-full h-full"
+            className="object-[80%_center]"   // ← ここだけでOK
             speed={0.5}
           />
+          {/* 下からのグラデ（必要ならそのまま） */}
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-paper)] md:from-transparent to-transparent opacity-90" />
         </div>
       </header>
+
 
       {/* --- Impact (The 3 Cards) --- */}
       <section id="impact" className="py-32 px-6 md:px-20 relative bg-white">
