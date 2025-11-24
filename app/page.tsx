@@ -342,21 +342,31 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-12 flex flex-wrap gap-8 border-t border-white/20 pt-8">
+              <div className="mt-12 flex flex-wrap gap-x-12 gap-y-6 border-t border-white/20 pt-8">
+                {/* 1. ライフコーチング (Being / 右脳) */}
                 <div>
                   <div className="text-white font-display text-4xl">165+</div>
-                  <div className="text-sm tracking-wider opacity-60 mt-1">HOURS SESSION</div>
+                  <div className="text-sm tracking-wider opacity-60 mt-1 uppercase">Life Coaching Hours</div>
                 </div>
+
+                {/* 2. ストレングス (Strategy / 左脳) */}
+                {/* 資料の182時間をベースに、180+と表記 */}
+                <div>
+                  <div className="text-white font-display text-4xl">180+</div>
+                  <div className="text-sm tracking-wider opacity-60 mt-1 uppercase">Strengths Hours</div>
+                </div>
+
+                {/* 3. 資格 */}
                 <div>
                   <div className="text-white font-display text-4xl">Certified</div>
-                  <div className="text-sm tracking-wider opacity-60 mt-1">Global Standard</div>
+                  <div className="text-sm tracking-wider opacity-60 mt-1 uppercase">Global Standard</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* --- Recommends (Target) --- */}
       <section className="py-24 px-6 md:px-20 bg-[var(--color-paper-dark)]">
         <div className="max-w-4xl mx-auto text-center mb-16">
