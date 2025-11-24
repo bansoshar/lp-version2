@@ -308,7 +308,7 @@ export default function Home() {
                >
                 <img 
                   src="/profile.jpg" 
-                  alt="Profile" 
+                  alt="Ishikawa Toshiro" 
                   className="w-full aspect-[3/4] object-cover grayscale contrast-125"
                 />
               </motion.div>
@@ -316,7 +316,16 @@ export default function Home() {
             </div>
 
             <div className="md:col-span-7 md:col-start-1 md:row-start-1 z-20 mix-blend-lighten">
-              <h3 className="font-serif text-4xl md:text-5xl mb-8 leading-tight">
+              {/* ▼▼▼ ここに名前を追加 ▼▼▼ */}
+              <div className="mb-6">
+                <p className="text-sm tracking-widest text-white/60 mb-2 font-display">Representative / Coach</p>
+                <h3 className="text-2xl md:text-3xl font-bold font-serif tracking-wide">
+                  石川 登志郎 <span className="text-lg font-normal opacity-70 ml-2 font-display">Toshiro Ishikawa</span>
+                </h3>
+              </div>
+              {/* ▲▲▲ 追加ここまで ▲▲▲ */}
+
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-8 leading-tight">
                 <span className="inline-phrase">孤高なリーダーの</span><br />
                 <span className="text-white/70 inline-phrase">良き理解者</span>
                 <span className="inline-phrase">であり続ける。</span>
@@ -325,7 +334,7 @@ export default function Home() {
                 <p>
                   IT業界における大規模組織のマネジメント経験から得た知見と、
                   CTI認定プロコーチとしての「人」への深い洞察。
-                  物事の本質を射抜く視点と、 人間味あふれる対話の両輪で、あなたの抱える孤独や迷いに寄り添います。
+                  物事の本質を射抜く視点と、 人間味あふれる対話の両輪で、 あなたの抱える孤独や迷いに寄り添います。
                 </p>
                 <p className="text-base text-gray-400 mt-4">
                   Gallup® 認定ストレングスコーチ ／ CTI認定プロコーチ（CPCC）<br/>
@@ -333,30 +342,21 @@ export default function Home() {
                 </p>
               </div>
 
-                <div className="mt-12 flex flex-wrap gap-x-12 gap-y-8 border-t border-white/20 pt-8">
-                  {/* 1. Life Coaching (Being / 心理的安全性) */}
-                  <div>
-                    <div className="text-white font-display text-4xl font-bold">165<span className="text-2xl ml-0.5">+</span></div>
-                    <div className="text-xs tracking-widest opacity-70 mt-2 uppercase font-medium">Life Coaching Hours</div>
-                  </div>
-
-                  {/* 2. Strengths (Strategy / 戦略的視点) */}
-                  <div>
-                    <div className="text-white font-display text-4xl font-bold">180<span className="text-2xl ml-0.5">+</span></div>
-                    <div className="text-xs tracking-widest opacity-70 mt-2 uppercase font-medium">Strengths Hours</div>
-                  </div>
-
-                  {/* 3. Authority (信頼の担保) */}
-                  <div>
-                    <div className="text-white font-display text-4xl font-bold">Certified</div>
-                    <div className="text-xs tracking-widest opacity-70 mt-2 uppercase font-medium">Global Standard</div>
-                  </div>
+              <div className="mt-12 flex flex-wrap gap-8 border-t border-white/20 pt-8">
+                <div>
+                  <div className="text-white font-display text-4xl">165+</div>
+                  <div className="text-sm tracking-wider opacity-60 mt-1">HOURS SESSION</div>
                 </div>
+                <div>
+                  <div className="text-white font-display text-4xl">Certified</div>
+                  <div className="text-sm tracking-wider opacity-60 mt-1">Global Standard</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
+      
       {/* --- Recommends (Target) --- */}
       <section className="py-24 px-6 md:px-20 bg-[var(--color-paper-dark)]">
         <div className="max-w-4xl mx-auto text-center mb-16">
