@@ -185,7 +185,7 @@ export default function Home() {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="
                 font-serif
-                text-2xl        /* スマホ */
+                text-4xl        /* スマホ */
                 sm:text-3xl     /* 小さめ端末 */
                 md:text-4xl     /* タブレット */
                 lg:text-7xl     /* PC：少し抑えめ */
