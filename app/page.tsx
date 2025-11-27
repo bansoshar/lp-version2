@@ -1,8 +1,27 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Menu, X, ArrowUpRight, Quote, Check, ChevronDown, MessageSquare, Clock, Calendar } from 'lucide-react';
+import { 
+  motion, 
+  useScroll, 
+  useTransform, 
+  AnimatePresence 
+} from 'framer-motion';
+
+import { 
+  ArrowRight, 
+  Menu, 
+  X, 
+  ArrowUpRight, 
+  Quote, 
+  Check, 
+  ChevronDown, 
+  MessageSquare, 
+  Clock, 
+  Calendar,
+  ShieldCheck  // ← Shield から ShieldCheck に変更しました
+} from 'lucide-react';
+
 
 // --- Components ---
 
@@ -385,8 +404,8 @@ export default function Home() {
           <span className="font-display text-[#223a5e] text-lg tracking-widest uppercase mb-4 block opacity-60">03 ― Target</span>
           <h2 className="font-serif text-2xl md:text-3xl text-[#223a5e] mb-4">訪れる変化のサイン</h2>
           <p className="text-gray-500">
-             これらの「迷い」は、あなたが次のステージへ進む準備ができた証拠です。<br className="hidden md:inline"/>
-             今はまだ言葉にならなくても、対話を通じて確かな道筋が見えてきます。
+              これらの「迷い」は、あなたが次のステージへ進む準備ができた証拠です。<br className="hidden md:inline"/>
+              今はまだ言葉にならなくても、対話を通じて確かな道筋が見えてきます。
           </p>
         </div>
         
@@ -495,6 +514,7 @@ export default function Home() {
         
         <div className="max-w-4xl mx-auto">
           <div className="relative border-l-2 border-slate-200 pl-10 md:pl-20 py-4 space-y-20">
+            
             {[
               { 
                 step: "01", 
@@ -521,6 +541,7 @@ export default function Home() {
                 icon: ArrowUpRight
               }
             ].map((item, i) => (
+              
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, x: 20 }}
@@ -532,12 +553,67 @@ export default function Home() {
                 <div className="absolute -left-[calc(2.5rem+1px)] md:-left-[calc(5rem+1px)] top-0 w-5 h-5 rounded-full bg-white border-4 border-[#223a5e]" />
                 
                 <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
-                  <div className="font-display text-4xl text-slate-200 shrink-0">{item.step}</div>
-                  <div>
+                  <div className="font-display text-4xl text-slate-200 shrink-0">
+                    {item.step}
+                  </div>
+
+                  <div className="flex-1">
                     <h3 className="font-serif text-xl font-bold text-[#223a5e] mb-3 flex items-center gap-3">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">{item.text}</p>
+
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                      {item.text}
+                    </p>
+
+                    {/* ▼▼▼ Step 04: 保証セクションのデザイン修正 ▼▼▼ */}
+                    {item.step === "04" && (
+                      <div className="mt-8 bg-slate-50 rounded-xl border border-slate-200 p-6 md:p-8 relative overflow-hidden group">
+                        {/* 装飾: 背景にうっすらと配置するアクセント */}
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-[#223a5e]/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110 duration-500" />
+                        
+                        <div className="relative z-10">
+                          {/* 見出し: アイコンを追加して信頼感を醸成 */}
+                          <h4 className="font-serif text-lg md:text-xl font-bold text-[#223a5e] mb-4 flex items-center gap-3">
+                            <ShieldCheck size={24} className="text-[#223a5e]" strokeWidth={1.5} />
+                            <span>初回セッションの安心保証（ライフコーチング契約時）</span>
+                          </h4>
+
+                          <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                            ライフコーチングをご契約いただいた後、最初の120分（導入セッション）では、<br />その方の状況に応じて次のような変化につながるテーマを扱います。
+                          </p>
+
+                          {/* チェックリスト: 背景をつけて視認性をアップ */}
+                          <ul className="space-y-3 mb-6">
+                            {[
+                              "今向き合うテーマが一つに定まる",
+                              "それを止めている無意識のパターンが見えてくる",
+                              "「次の一歩」が仮でも言葉になる"
+                            ].map((text, idx) => (
+                              <li key={idx} className="flex items-start gap-3 text-sm md:text-base text-slate-700">
+                                <div className="mt-1 w-5 h-5 rounded-full bg-[#223a5e]/10 flex items-center justify-center flex-shrink-0">
+                                  <Check size={12} className="text-[#223a5e]" strokeWidth={3} />
+                                </div>
+                                <span>{text}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                          {/* 条件部分: 少しトーンを変えて明確に */}
+                          <div className="bg-white rounded-lg p-4 border border-slate-100 shadow-sm">
+                            <p className="text-slate-700 text-sm leading-relaxed">
+                              これらのいずれにも<span className="font-bold text-[#223a5e]">“前に進む手応えがまったくない”</span>と感じ、継続を希望されない場合、<span className="underline decoration-slate-300 underline-offset-4"><br />料金はいただきません。</span>契約もその場で終了となります。
+                            </p>
+                          </div>
+
+                          <p className="text-xs text-slate-400 mt-4 text-center md:text-left">
+                            ※この保証は、安心して一歩を踏み出せるようにご用意しています。
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                    {/* ▲▲▲ 修正箇所ここまで ▲▲▲ */}
+
                   </div>
                 </div>
               </motion.div>
@@ -545,6 +621,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
       {/* --- Voices --- */}
       <section id="voices" className="py-32 px-6 md:px-20 bg-[var(--color-paper-dark)]">
@@ -584,7 +662,8 @@ export default function Home() {
             { q: "コーチングを受けるのが初めてで不安です。", a: "ご安心ください。多くのクライアント様が初めての方です。まずは対話を通じてリラックスしていただき、無理なく思考を整理できるようガイドいたします。" },
             { q: "まだ明確な目標がないのですが、受けても大丈夫ですか？", a: "はい、大丈夫です。「何がしたいかわからない」「モヤモヤしている」という状態こそ、コーチングが役立ちます。対話の中で本当の願いや目標を見つけていきましょう。" },
             { q: "準備するものはありますか？", a: "特別な準備は必要ありませんが、静かで話しやすい環境（通信環境含む）をご用意ください。もし話したいテーマがあれば、事前にメモしておくとスムーズです。" },
-            { q: "ストレングスファインダー（CliftonStrengths）の診断結果は必須ですか？", a: "ライフコーチングの場合は必須ではありません。ストレングスコーチングをご希望の場合は、事前に診断（Top5または34資質）を受けていただき、結果レポートをお手元にご用意ください。" }
+            { q: "ストレングスファインダー（CliftonStrengths）の診断結果は必須ですか？", a: "ライフコーチングの場合は必須ではありません。ストレングスコーチングをご希望の場合は、事前に診断（Top5または34資質）を受けていただき、結果レポートをお手元にご用意ください。" },
+            { q: "初回のライフコーチングが合わなかった場合、料金はどうなりますか？", a: "契約後の初回120分（導入セッション）で、前に進む手応えがまったく得られず、継続を希望されない場合は、料金はいただきません。契約もその場で終了となります。この価値保証は、安心して一歩を踏み出していただくために設けています。" }
           ].map((item, i) => (
             <FAQItem key={i} q={item.q} a={item.a} />
           ))}
@@ -617,6 +696,8 @@ export default function Home() {
             </button>
           </div>
 
+
+
           {/* フッターレイアウト修正: 中央揃え & ロゴ画像追加 */}
           <div className="border-t border-white/20 pt-10 flex flex-col items-center gap-6 text-sm text-white/50">
             {/* ロゴ画像: logo2.png */}
@@ -626,8 +707,8 @@ export default function Home() {
                 alt="NAKAIMA" 
                 className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
               />
-            </div>
             
+          </div>
             <p>&copy; 2025 NAKAIMA BANSOSHAR</p>
             
             <div className="flex gap-8">
