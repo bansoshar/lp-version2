@@ -588,7 +588,7 @@ export default function Home() {
                           {/* 導入セッションで扱うテーマ */}
                           <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-3">
                             セッションでは、その方の状況に応じて<br />
-                            次のような「変化の入口」となるテーマを扱います。
+                            次のような「変化の入口」となるテーマを扱います：
                           </p>
 
                           <ul className="space-y-3 mb-6">
