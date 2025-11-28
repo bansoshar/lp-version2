@@ -573,24 +573,34 @@ export default function Home() {
                         <div className="absolute top-0 right-0 w-24 h-24 bg-[#223a5e]/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110 duration-500" />
                         
                         <div className="relative z-10">
-                          {/* 見出し: アイコンを追加して信頼感を醸成 */}
+                          {/* 見出し */}
                           <h4 className="font-serif text-lg md:text-xl font-bold text-[#223a5e] mb-4 flex items-center gap-3">
                             <ShieldCheck size={24} className="text-[#223a5e]" strokeWidth={1.5} />
                             <span>ご契約の安心保証（ライフコーチング契約時）</span>
                           </h4>
 
+                          {/* 30日保証の説明 */}
                           <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
-                            ライフコーチングをご契約いただいた後、最初の120分（導入セッション）では、<br />その方の状況に応じて次のような変化につながるテーマを扱います。
+                            ライフコーチングをご契約いただいた日から30日間は、<br />
+                            安心して変化のプロセスを試していただける期間としています。
                           </p>
 
-                          {/* チェックリスト: 背景をつけて視認性をアップ */}
+                          {/* 導入セッションで扱うテーマ */}
+                          <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-3">
+                            セッションでは、その方の状況に応じて<br />
+                            次のような「変化の入口」となるテーマを扱います。
+                          </p>
+
                           <ul className="space-y-3 mb-6">
                             {[
                               "今向き合うテーマが一つに定まる",
                               "それを止めている無意識のパターンが見えてくる",
                               "「次の一歩」が仮でも言葉になる"
                             ].map((text, idx) => (
-                              <li key={idx} className="flex items-start gap-3 text-sm md:text-base text-slate-700">
+                              <li
+                                key={idx}
+                                className="flex items-start gap-3 text-sm md:text-base text-slate-700"
+                              >
                                 <div className="mt-1 w-5 h-5 rounded-full bg-[#223a5e]/10 flex items-center justify-center flex-shrink-0">
                                   <Check size={12} className="text-[#223a5e]" strokeWidth={3} />
                                 </div>
@@ -599,20 +609,31 @@ export default function Home() {
                             ))}
                           </ul>
 
-                          {/* 条件部分: 少しトーンを変えて明確に */}
+                          {/* 手応えがない場合の条件 */}
                           <div className="bg-white rounded-lg p-4 border border-slate-100 shadow-sm">
                             <p className="text-slate-700 text-sm leading-relaxed">
-                              これらのいずれにも<span className="font-bold text-[#223a5e]">“前に進む手応えがまったくない”</span>と感じ、継続を希望されない場合、<span className="underline decoration-slate-300 underline-offset-4"><br />料金はいただきません。</span>契約もその場で終了となります。
+                              30日間の中で
+                              <span className="font-bold text-[#223a5e]">
+                                “前に進む方向性の手応えがまったくない”
+                              </span>
+                              と感じ、継続を望まれない場合は、<br />
+                              <span className="underline decoration-slate-300 underline-offset-4">
+                                その月のセッション料金はいただきません。
+                              </span>
+                              契約もその場で終了できます。
                             </p>
                           </div>
 
+                          {/* 注意書き */}
                           <p className="text-xs text-slate-400 mt-4 text-center md:text-left">
-                            ※この保証は、安心して一歩を踏み出せるようにご用意しています。
+                            ※この保証は、ご自身の人生に主体的に向き合う方が、安心して一歩を踏み出すための仕組みです。
                           </p>
                         </div>
+
                       </div>
                     )}
                     {/* ▲▲▲ 修正箇所ここまで ▲▲▲ */}
+
 
                   </div>
                 </div>
@@ -663,7 +684,7 @@ export default function Home() {
             { q: "まだ明確な目標がないのですが、受けても大丈夫ですか？", a: "はい、大丈夫です。「何がしたいかわからない」「モヤモヤしている」という状態こそ、コーチングが役立ちます。対話の中で本当の願いや目標を見つけていきましょう。" },
             { q: "準備するものはありますか？", a: "特別な準備は必要ありませんが、静かで話しやすい環境（通信環境含む）をご用意ください。もし話したいテーマがあれば、事前にメモしておくとスムーズです。" },
             { q: "ストレングスファインダー（CliftonStrengths）の診断結果は必須ですか？", a: "ライフコーチングの場合は必須ではありません。ストレングスコーチングをご希望の場合は、事前に診断（Top5または34資質）を受けていただき、結果レポートをお手元にご用意ください。" },
-            { q: "初回のライフコーチングが合わなかった場合、料金はどうなりますか？", a: "契約後の初回120分（導入セッション）で、前に進む手応えがまったく得られず、継続を希望されない場合は、料金はいただきません。契約もその場で終了となります。この価値保証は、安心して一歩を踏み出していただくために設けています。" }
+            { q: "初回のライフコーチングが合わなかった場合、料金はどうなりますか？", a: "ご契約から30日以内のセッションで、前に進む手応えがまったく得られず、継続を希望されない場合は、料金はいただきません。契約もその場でいったん終了となります。この安心保証は、安心して一歩を踏み出していただくために設けています。" }
           ].map((item, i) => (
             <FAQItem key={i} q={item.q} a={item.a} />
           ))}
