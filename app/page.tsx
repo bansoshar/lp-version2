@@ -446,7 +446,7 @@ export default function Home() {
                 <img 
                   src="/service1.jpg" 
                   alt="Life Coaching"
-                  className="w-full aspect-video object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-white p-6 shadow-xl hidden md:block">
