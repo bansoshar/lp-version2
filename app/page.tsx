@@ -404,19 +404,19 @@ export default function Home() {
           <span className="font-display text-[#223a5e] text-lg tracking-widest uppercase mb-4 block opacity-60">03 ― Target</span>
           <h2 className="font-serif text-2xl md:text-3xl text-[#223a5e] mb-4">訪れる変化のサイン</h2>
           <p className="text-gray-500">
-              これらの「迷い」は、あなたが次のステージへ進む準備ができた証拠です。<br className="hidden md:inline"/>
-              今はまだ言葉にならなくても、対話を通じて確かな道筋が見えてきます。
+              これらの「迷い」は、あなたが次のステージへ進む準備が整ったサインです。<br className="hidden md:inline"/>
+              まだ言葉になっていなくても、対話を通じて少しずつ道筋が見えていきます。
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           {[
-            "周囲の期待に応えるばかりで、自分の本当の願いがわからない",
-            "重要な決断を前にして、自信が持てず足踏みしてしまう",
-            "今の働き方や生き方に違和感があるが、どう変えればいいか見えない",
-            "マネージャーとして孤立しており、本音で話せる相手がいない",
-            "自分の「強み」と言われてもピンとこない、活かし方がわからない",
-            "もっと自分らしく生きたいが、わがままになるのではないかと怖い"
+            "周囲の期待に応えてばかりで、自分の本当の願いがわからない",
+            "大事な決断の前に、自信が揺らぎ、足がすくんでしまう",
+            "今の働き方や生き方に説明しづらい違和感がある",
+            "マネージャーとして孤立し、本音を話せる相手がいない",
+            "「強み」と言われてもピンとこず、どう活かせばいいかわからない",
+            "もっと自分らしく生きたいのに、わがままになるのではと怖い"
           ].map((item, i) => (
             <motion.div 
               key={i}
