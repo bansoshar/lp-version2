@@ -576,7 +576,7 @@ export default function Home() {
                           {/* 見出し: アイコンを追加して信頼感を醸成 */}
                           <h4 className="font-serif text-lg md:text-xl font-bold text-[#223a5e] mb-4 flex items-center gap-3">
                             <ShieldCheck size={24} className="text-[#223a5e]" strokeWidth={1.5} />
-                            <span>初回セッションの安心保証（ライフコーチング契約時）</span>
+                            <span>ご契約の安心保証（ライフコーチング契約時）</span>
                           </h4>
 
                           <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
