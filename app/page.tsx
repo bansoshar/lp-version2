@@ -19,7 +19,7 @@ import {
   MessageSquare, 
   Clock, 
   Calendar,
-  ShieldCheck  // ← Shield から ShieldCheck に変更しました
+  ShieldCheck  // ← Shield から ShieldCheck に変更
 } from 'lucide-react';
 
 
