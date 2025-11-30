@@ -174,27 +174,56 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // チェックボックスの選択値を hidden input にまとめる処理
-  useEffect(() => {
-    if (!formRef.current) return;
-    const form = formRef.current;
+  // --- Formspree 送信用のハンドラー ---
+  const handleFormSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
+    e.preventDefault();
 
-    const handleSubmit = () => {
-      const selected = Array.from(
-        form.querySelectorAll<HTMLInputElement>(
-          "input[name='service_option']:checked"
-        )
+    const form = e.currentTarget;
+
+    // FormData を生成
+    const formData = new FormData(form);
+
+    // チェックされた service_option をまとめる
+    const selectedServices = Array.from(
+      form.querySelectorAll<HTMLInputElement>(
+        "input[name='service_option']:checked"
       )
-        .map((el) => el.value)
-        .join(", ");
+    ).map((el) => el.value);
 
-      const hidden = form.querySelector<HTMLInputElement>("#service_summary");
-      if (hidden) hidden.value = selected;
-    };
+    const joinedServices = selectedServices.join(", ");
 
-    form.addEventListener("submit", handleSubmit);
-    return () => form.removeEventListener("submit", handleSubmit);
-  }, []);
+    // Formspree に送る用の「service」フィールドとしてセット
+    formData.set("service", joinedServices);
+
+    // （必要なら元の service_option を消したい場合）
+    // formData.delete("service_option");
+
+    try {
+      const res = await fetch("https://formspree.io/f/mwpjpyrj", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (res.ok) {
+        // 送信成功 → /thanks にリダイレクト
+        window.location.href = "https://bansoshar.com/thanks";
+      } else {
+        alert(
+          "送信に失敗しました。時間をおいて再試行してください。"
+        );
+      }
+    } catch (error) {
+      console.error(error);
+      alert(
+        "送信時にエラーが発生しました。通信環境をご確認のうえ、再度お試しください。"
+      );
+    }
+  };
 
   return (
     <div className="relative w-full">
@@ -909,16 +938,9 @@ export default function Home() {
           {/* Formspree Form */}
           <form
             ref={formRef}
-            action="https://formspree.io/f/mwpjpyrj"
-            method="POST"
+            onSubmit={handleFormSubmit}
             className="bg-[#223a5e] p-6 md:p-10 rounded-3xl border border-white/20 shadow-2xl"
           >
-            <input
-              type="hidden"
-              name="_next"
-              value="https://bansoshar.com/thanks"
-            />
-
             <div className="space-y-8">
               {/* 1. 基本情報（縦並び） */}
               <div className="space-y-6">
@@ -1023,8 +1045,6 @@ export default function Home() {
 
               {/* Submit Button */}
               <div className="pt-4">
-                <input type="hidden" id="service_summary" name="service" />
-
                 <button
                   type="submit"
                   className="group relative w-full inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-white font-bold text-[#223a5e] transition-all duration-300 hover:bg-[#e6e6e6] shadow-lg hover:shadow-white/20 hover:scale-[1.01]"
