@@ -1057,7 +1057,7 @@ export default function Home() {
                 className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
               />
             </div>
-            <p>&copy; 2025 NAKAIMA BANSOSHA</p>
+            <p>&copy; 2025 NAKAIMA BANSOSHAR</p>
           </div>
         </div>
       </footer>
