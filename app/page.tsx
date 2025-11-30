@@ -174,25 +174,27 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // チェックボックスの選択値を hidden input にまとめる
-    useEffect(() => {
-      if (!formRef.current) return;
-      const form = formRef.current;
+  // チェックボックスの選択値を hidden input にまとめる処理
+  useEffect(() => {
+    if (!formRef.current) return;
+    const form = formRef.current;
 
-      const handleSubmit = () => {
-        const selected = Array.from(
-          form.querySelectorAll<HTMLInputElement>("input[name='service_option']:checked")
+    const handleSubmit = () => {
+      const selected = Array.from(
+        form.querySelectorAll<HTMLInputElement>(
+          "input[name='service_option']:checked"
         )
-          .map(el => el.value)
-          .join(", ");
+      )
+        .map((el) => el.value)
+        .join(", ");
 
-        const hidden = form.querySelector<HTMLInputElement>("#service_summary");
-        if (hidden) hidden.value = selected;
-      };
+      const hidden = form.querySelector<HTMLInputElement>("#service_summary");
+      if (hidden) hidden.value = selected;
+    };
 
-      form.addEventListener("submit", handleSubmit);
-      return () => form.removeEventListener("submit", handleSubmit);
-    }, []);
+    form.addEventListener("submit", handleSubmit);
+    return () => form.removeEventListener("submit", handleSubmit);
+  }, []);
 
   return (
     <div className="relative w-full">
@@ -204,7 +206,7 @@ export default function Home() {
             : "bg-transparent"
         }`}
       >
-        {/* ロゴ部分: テキスト + 画像 */}
+        {/* ロゴ部分 */}
         <div
           className={`flex items-center gap-3 font-serif text-xl font-bold tracking-widest transition-colors duration-300 ${
             scrolled ? "text-[#223a5e]" : "text-white"
@@ -281,7 +283,7 @@ export default function Home() {
 
       {/* --- Hero Section --- */}
       <header className="relative h-screen min-h-[800px] w-full flex flex-col md:flex-row overflow-hidden">
-        {/* 左：テキストエリア（無地） */}
+        {/* 左：テキストエリア */}
         <div className="w-full md:w-1/2 h-full relative flex items-center justify-center p-10 md:p-20 bg-[var(--color-paper)] z-10">
           <div className="relative w-full max-w-lg">
             <motion.h1
@@ -325,7 +327,9 @@ export default function Home() {
                 「誰かの期待」より、「自分の本音」を。
               </span>
               <br className="hidden md:inline" />
-              <span className="inline-block">強みと願いを軸に、納得の一歩へ。</span>
+              <span className="inline-block">
+                強みと願いを軸に、納得の一歩へ。
+              </span>
             </motion.p>
 
             <motion.div
@@ -333,12 +337,14 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2 }}
             >
-              <MagneticButton onClick={scrollToForm}>Experience Session</MagneticButton>
+              <MagneticButton onClick={scrollToForm}>
+                Experience Session
+              </MagneticButton>
             </motion.div>
           </div>
         </div>
 
-        {/* 右：海の写真（右寄せ） */}
+        {/* 右：画像エリア */}
         <div className="w-full md:w-1/2 h-[50vh] md:h-full relative">
           <ParallaxImage
             src="/hero.jpg"
@@ -366,7 +372,9 @@ export default function Home() {
                   ナカイマ伴走舎のコーチングは、
                 </span>
                 <br className="hidden md:inline" />
-                <span className="inline-block">単なる悩み相談ではありません。</span>
+                <span className="inline-block">
+                  単なる悩み相談ではありません。
+                </span>
               </p>
               <p className="mt-4">
                 <span className="inline-block">自己理解を深め、</span>
@@ -470,7 +478,8 @@ export default function Home() {
                 <p>
                   IT業界における大規模組織のマネジメント経験から得た知見と、
                   CTI認定プロコーチとしての「人」への深い洞察。
-                  物事の本質を射抜く視点と、 人間味あふれる対話の両輪で、 あなたの抱える孤独や迷いに寄り添います。
+                  物事の本質を射抜く視点と、 人間味あふれる対話の両輪で、
+                  あなたの抱える孤独や迷いに寄り添います。
                 </p>
                 <p className="text-base text-gray-400 mt-4">
                   Gallup® 認定ストレングスコーチ ／ CTI認定プロコーチ（CPCC）
@@ -495,7 +504,9 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <div className="text-white font-display text-4xl">Certified</div>
+                  <div className="text-white font-display text-4xl">
+                    Certified
+                  </div>
                   <div className="text-sm tracking-wider opacity-60 mt-1 uppercase">
                     Global Standard
                   </div>
@@ -541,14 +552,19 @@ export default function Home() {
               <div className="w-6 h-6 mt-1 border border-[#223a5e] rounded-full flex items-center justify-center shrink-0 text-[#223a5e]">
                 <Check size={14} />
               </div>
-              <p className="text-gray-700 leading-relaxed font-medium">{item}</p>
+              <p className="text-gray-700 leading-relaxed font-medium">
+                {item}
+              </p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* --- Services --- */}
-      <section id="services" className="py-32 px-6 md:px-20 bg-[var(--color-paper)]">
+      <section
+        id="services"
+        className="py-32 px-6 md:px-20 bg-[var(--color-paper)]"
+      >
         <SectionHeader en="04 ― Offerings" jp="提供するサービス" />
 
         <div className="max-w-7xl mx-auto space-y-32">
@@ -580,13 +596,16 @@ export default function Home() {
               </p>
               <ul className="space-y-2 mb-8 font-serif text-gray-700">
                 <li className="flex items-center gap-3">
-                  <Check size={16} className="text-[#223a5e]" /> 真の願いと価値観の言語化
+                  <Check size={16} className="text-[#223a5e]" />{" "}
+                  真の願いと価値観の言語化
                 </li>
                 <li className="flex items-center gap-3">
-                  <Check size={16} className="text-[#223a5e]" /> メンタルブロックの解消
+                  <Check size={16} className="text-[#223a5e]" />{" "}
+                  メンタルブロックの解消
                 </li>
                 <li className="flex items-center gap-3">
-                  <Check size={16} className="text-[#223a5e]" /> 願いを行動へ、確かな一歩を
+                  <Check size={16} className="text-[#223a5e]" />{" "}
+                  願いを行動へ、確かな一歩を
                 </li>
               </ul>
               <MagneticButton dark={false} onClick={scrollToForm}>
@@ -629,17 +648,22 @@ export default function Home() {
                   無意識の行動パターンを戦略的な「強み」へと昇華させ、
                 </span>
                 <br className="hidden md:inline" />
-                <span className="inline-phrase">パフォーマンスを最大化します。</span>
+                <span className="inline-phrase">
+                  パフォーマンスを最大化します。
+                </span>
               </p>
               <ul className="space-y-2 mb-8 font-serif text-gray-700">
                 <li className="flex items-center gap-3">
-                  <Check size={16} className="text-[#223a5e]" /> 資質プロファイルの徹底分析
+                  <Check size={16} className="text-[#223a5e]" />{" "}
+                  資質プロファイルの徹底分析
                 </li>
                 <li className="flex items-center gap-3">
-                  <Check size={16} className="text-[#223a5e]" /> 卓越した成果を生む「勝ちパターン」の活用
+                  <Check size={16} className="text-[#223a5e]" />{" "}
+                  卓越した成果を生む「勝ちパターン」の活用
                 </li>
                 <li className="flex items-center gap-3">
-                  <Check size={16} className="text-[#223a5e]" /> 強みを活かしたマネジメント
+                  <Check size={16} className="text-[#223a5e]" />{" "}
+                  強みを活かしたマネジメント
                 </li>
               </ul>
               <MagneticButton dark={false} onClick={scrollToForm}>
