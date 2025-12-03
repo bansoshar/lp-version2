@@ -332,11 +332,11 @@ export default function Home() {
                 mb-8
               "
             >
-              <span className="inline-phrase">迷いのない決断は、</span>
+              <span className="inline-phrase">止めているのは</span>
               <br />
-              <span className="inline-phrase">もっと自然に、</span>
+              <span className="inline-phrase">迷いじゃない</span>
               <br />
-              <span className="inline-phrase">自分らしく。</span>
+              <span className="inline-phrase">本音だ</span>
             </motion.h1>
 
             <motion.div
@@ -353,11 +353,12 @@ export default function Home() {
               className="text-base md:text-lg lg:text-xl text-gray-600 leading-loose tracking-widest mb-12"
             >
               <span className="inline-block">
-                「誰かの期待」より、「自分の本音」を。
+              <br />
+              妥協できる願いなら、とっくに諦めているはずです。 その「重さ」は、あなたが人生を投げ出していない何よりの証拠。 頭で出した正解ではなく、 腹の底から頷ける決断を。
               </span>
               <br className="hidden md:inline" />
               <span className="inline-block">
-                強みと願いを軸に、納得の一歩へ。
+               
               </span>
             </motion.p>
 
