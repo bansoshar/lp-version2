@@ -759,75 +759,6 @@ export default function Home() {
                       {item.text}
                     </p>
 
-                    {item.step === "04" && (
-                      <div className="mt-8 bg-slate-50 rounded-xl border border-slate-200 p-6 md:p-8 relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 w-24 h-24 bg-[#223a5e]/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110 duration-500" />
-
-                        <div className="relative z-10">
-                          <h4 className="font-serif text-lg md:text-xl font-bold text-[#223a5e] mb-4 flex items-center gap-3">
-                            <ShieldCheck
-                              size={24}
-                              className="text-[#223a5e]"
-                              strokeWidth={1.5}
-                            />
-                            <span>ご契約の安心保証（ライフコーチング契約時）</span>
-                          </h4>
-
-                          <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
-                            ライフコーチングをご契約いただいた日から30日間は、
-                            <br />
-                            安心して変化のプロセスを試していただける期間としています。
-                          </p>
-
-                          <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-3">
-                            セッションでは、その方の状況に応じて
-                            <br />
-                            次のような「変化の入口」となるテーマを扱います：
-                          </p>
-
-                          <ul className="space-y-3 mb-6">
-                            {[
-                              "今向き合うテーマが一つに定まる",
-                              "それを止めている無意識のパターンが見えてくる",
-                              "「次の一歩」が仮でも言葉になる",
-                            ].map((text, idx) => (
-                              <li
-                                key={idx}
-                                className="flex items-start gap-3 text-sm md:text-base text-slate-700"
-                              >
-                                <div className="mt-1 w-5 h-5 rounded-full bg-[#223a5e]/10 flex items-center justify-center flex-shrink-0">
-                                  <Check
-                                    size={12}
-                                    className="text-[#223a5e]"
-                                    strokeWidth={3}
-                                  />
-                                </div>
-                                <span>{text}</span>
-                              </li>
-                            ))}
-                          </ul>
-
-                          <div className="bg-white rounded-lg p-4 border border-slate-100 shadow-sm">
-                            <p className="text-slate-700 text-sm leading-relaxed">
-                              30日間の中で
-                              <span className="font-bold text-[#223a5e]">
-                                “前に進む方向性の手応えがまったくない”
-                              </span>
-                              と感じ、継続を望まれない場合は、
-                              <br />
-                              <span className="underline decoration-slate-300 underline-offset-4">
-                                その月のセッション料金はいただきません。
-                              </span>
-                              契約もその場で終了できます。
-                            </p>
-                          </div>
-
-                          <p className="text-xs text-slate-400 mt-4 text-center md:text-left">
-                            ※この保証は、ご自身の人生に主体的に向き合う方が、安心して一歩を踏み出すための仕組みです。
-                          </p>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </motion.div>
@@ -883,9 +814,180 @@ export default function Home() {
         </div>
       </section>
 
+
+{/* --- Pricing --- */}
+      <section
+        id="pricing"
+        className="py-32 px-6 md:px-20 bg-[var(--color-paper-light)]"
+      >
+        <SectionHeader en="07 ― Pricing" jp="料金について" />
+
+        <div className="max-w-5xl mx-auto -mt-16">
+          
+          {/* Intro */}
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <p className="text-gray-500 leading-relaxed">
+                ライフコーチングは扱うテーマの性質上、
+                <span className="font-semibold text-slate-700">
+                  3ヶ月〜（全6回以上）の継続
+                </span>
+                でのみ承っています。
+                <br className="hidden md:inline" />
+
+                ストレングスコーチングは、
+                単発でのご利用と継続のどちらにも対応しています。
+                <br className="hidden md:inline" />
+
+                マネージャー／リーダー向けの個別セッションにも対応しています。
+              </p>
+            </div>
+
+
+          {/* Pricing cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            
+            {/* Life Coaching */}
+            <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
+              <h3 className="text-lg font-semibold tracking-wide text-slate-900 mb-3">
+                ライフコーチング
+              </h3>
+              <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
+                LIFE COACHING
+              </p>
+              <p className="text-2xl font-semibold text-slate-900 mb-2">
+                1回（60分） ¥15,000
+              </p>
+              <p className="text-xs text-slate-400 mb-6">
+                ※初回の導入セッションのみ120分／同料金で実施します。
+              </p>
+              <ul className="space-y-3 text-sm text-slate-700 flex-grow">
+                <li>・2〜3週間に1回のペースが目安です。</li>
+                <li>・理想の人生像を一緒に描き、その解像度を高めていきます。</li>
+                <li>・思考のクセに気づき、「自分の声」で進める基盤を整えます。</li>
+                <li>・自分の声で選べる状態へ整えていきます。</li>
+                <li>・ご契約の安心保証（下記参照）</li>
+              </ul>
+            </div>
+
+            {/* Strengths Coaching */}
+            <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
+              <h3 className="text-lg font-semibold tracking-wide text-slate-900 mb-3">
+                ストレングスコーチング
+              </h3>
+              <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
+                STRENGTHS COACHING
+              </p>
+              <p className="text-2xl font-semibold text-slate-900 mb-2">
+                1回（60〜90分） ¥15,000
+              </p>
+              <p className="text-xs text-slate-400 mb-6">
+                ※単発／継続どちらの形でもご利用いただけます。
+              </p>
+              <ul className="space-y-3 text-sm text-slate-700 flex-grow">
+                <li>・プロファイリングセッション（約90分）</li>
+                <li>・ストレングスコーチング（約60分）</li>
+                <li>・3ヶ月〜（全6回以上）の継続も可能です。</li>
+                <li className="pl-4 text-slate-500 text-xs">
+                  - プロファイリング＋Gallupツール＋強み活用支援
+                </li>
+                <li>・強みを基点にした1on1設計やメンバー支援にも対応します。</li>
+              </ul>
+            </div>
+          </div>
+
+{/* Guarantee Section */}
+          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 md:p-12 relative overflow-hidden group">
+            
+            {/* Decoration Background (Subtle & Elegant) */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#223a5e]/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-105 duration-700 pointer-events-none" />
+
+            <div className="relative z-10">
+              <h4 className="font-serif text-xl md:text-2xl font-bold text-[#223a5e] mb-10 flex items-center gap-4">
+                <div className="p-2 bg-white rounded-lg shadow-sm text-[#223a5e]">
+                  <ShieldCheck size={28} strokeWidth={1.5} />
+                </div>
+                <span>ご契約の安心保証（ライフコーチング限定）</span>
+              </h4>
+
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                
+                {/* Left Column: Description */}
+                <div>
+                  <div className="space-y-6 text-slate-600 text-sm md:text-base leading-loose">
+                    <p>
+                      ライフコーチングをご契約いただいた日から30日間は、
+                      <br className="hidden md:inline" />
+                      安心して変化のプロセスを試していただける期間としています。
+                    </p>
+                    <p>
+                      セッションでは、その方の状況に応じて
+                      <br className="hidden md:inline" />
+                      次のような「変化の入口」となるテーマを扱います：
+                    </p>
+                  </div>
+
+                  <ul className="mt-8 space-y-4">
+                    {[
+                      "今向き合うテーマが一つに定まる",
+                      "それを止めている無意識のパターンが見えてくる",
+                      "「次の一歩」が仮でも言葉になる",
+                    ].map((text, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-3 text-sm md:text-base text-slate-700"
+                      >
+                        <div className="mt-1 w-6 h-6 rounded-full bg-[#223a5e]/10 flex items-center justify-center flex-shrink-0 text-[#223a5e]">
+                          <Check size={14} strokeWidth={3} />
+                        </div>
+                        <span className="leading-relaxed pt-[2px]">{text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Right Column: Promise Card */}
+                <div className="flex flex-col">
+                  <div className="bg-white rounded-xl p-8 shadow-md border-l-4 border-[#223a5e] relative">
+                    {/* "Guarantee" Label */}
+                    <span className="absolute -top-3 right-6 bg-[#223a5e] text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-widest uppercase">
+                      Guarantee
+                    </span>
+                    
+                    <p className="text-slate-700 text-sm md:text-base leading-relaxed">
+                      30日間の中で
+                      <span className="block my-4 font-bold text-lg text-[#223a5e]">
+                        “前に進む方向性の手応えが<br/>まったくない”
+                      </span>
+                      と感じ、継続を望まれない場合は、
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-slate-100">
+                      <p className="font-semibold text-slate-800">
+                        その月のセッション料金はいただきません。
+                      </p>
+                      <p className="text-sm text-slate-500 mt-1">
+                        契約もその場で終了できます。
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-xs text-slate-400 mt-5 text-center leading-relaxed px-4">
+                    ※この保証は、ご自身の人生に主体的に向き合う方が、<br className="hidden md:inline"/>
+                    安心して一歩を踏み出すための仕組みです。
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
       {/* --- FAQ --- */}
       <section id="faq" className="py-32 px-6 md:px-20 bg-white">
-        <SectionHeader en="07 ― Q&A" jp="よくある質問" />
+        <SectionHeader en="08 ― Q&A" jp="よくある質問" />
 
         <div className="max-w-3xl mx-auto">
           {[
@@ -914,6 +1016,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
 
       {/* --- Contact Form --- */}
       <section
