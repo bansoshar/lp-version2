@@ -506,10 +506,10 @@ export default function Home() {
               </h3>
               <div className="space-y-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
                 <p>
-                  IT業界における大規模組織のマネジメント経験から得た知見と、
-                  CTI認定プロコーチとしての「人」への深い洞察。
-                  物事の本質を射抜く視点と、 人間味あふれる対話の両輪で、
-                  あなたの抱える孤独や迷いに寄り添います。
+                  IT業界で多様な組織をマネジメントしてきたなかで、
+                  “人が決められなくなる瞬間”を見てきました。
+                  CTI認定プロコーチとしての深い洞察と、飾らない対話で、
+                  思考の行き止まりに、前へ進む原動力が戻る場をつくります。
                 </p>
                 <p className="text-base text-gray-400 mt-4">
                   Gallup® 認定ストレングスコーチ ／ CTI認定プロコーチ（CPCC）
