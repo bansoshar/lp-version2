@@ -1036,7 +1036,7 @@ export default function Home() {
             <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
               まずは30分の無料体験セッションで、
               <br className="hidden md:inline" />
-              胸の奥に置き去りにしてきた“願いの輪郭”に触れてみてください。
+              胸の奥で眠っていた“願いの輪郭”に触れてみてください。
             </p>
           </div>
 
