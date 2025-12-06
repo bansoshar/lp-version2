@@ -403,15 +403,14 @@ export default function Home() {
                 </span>
                 <br className="hidden md:inline" />
                 <span className="inline-block">
-                  単なる悩み相談ではありません。
+                  迷いを解消するだけの時間ではありません。
                 </span>
               </p>
               <p className="mt-4">
-                <span className="inline-block">自己理解を深め、</span>
-                <span className="inline-block">視座を高めることで、</span>
+                <span className="inline-block">あなたの中に眠っていた</span>
+                <span className="inline-block">“ほんとうの声”が動き出し、</span>
                 <br className="hidden md:inline" />
-                <span className="inline-block">あなたの内側と現実に</span>
-                <span className="inline-block">確かな変化をもたらします。</span>
+                <span className="inline-block">選択の質が変わっていくプロセスです。</span>
               </p>
             </div>
           </div>
