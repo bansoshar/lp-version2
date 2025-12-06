@@ -847,13 +847,13 @@ export default function Home() {
             
             {/* Life Coaching */}
             <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
-              <h3 className="text-lg font-semibold tracking-wide text-slate-900 mb-3">
+              <h3 className="text-lg font-semibold tracking-wide text-[#223a5e] mb-3">
                 ライフコーチング
               </h3>
               <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
                 LIFE COACHING
               </p>
-              <p className="text-2xl font-semibold text-slate-900 mb-2">
+              <p className="text-2xl font-semibold text-[#223a5e] mb-2">
                 1回（60分） ¥15,000
               </p>
               <p className="text-xs text-slate-400 mb-6">
@@ -870,13 +870,13 @@ export default function Home() {
 
             {/* Strengths Coaching */}
             <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
-              <h3 className="text-lg font-semibold tracking-wide text-slate-900 mb-3">
+              <h3 className="text-lg font-semibold tracking-wide text-[#223a5e] mb-3">
                 ストレングスコーチング
               </h3>
               <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
                 STRENGTHS COACHING
               </p>
-              <p className="text-2xl font-semibold text-slate-900 mb-2">
+              <p className="text-2xl font-semibold text-[#223a5e] mb-2">
                 1回（60〜90分） ¥15,000
               </p>
               <p className="text-xs text-slate-400 mb-6">
