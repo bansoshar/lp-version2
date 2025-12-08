@@ -159,6 +159,9 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const formRef = useRef<HTMLFormElement | null>(null);
+  const [agreedPrivacy, setAgreedPrivacy] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false); 
+
 
   const scrollToForm = () => {
     document
@@ -1017,7 +1020,7 @@ export default function Home() {
       </section>
 
 
-      {/* --- Contact Form --- */}
+{/* --- Contact Form --- */}
       <section
         id="contact-form"
         className="py-24 px-6 md:px-20 bg-[#223a5e] text-white relative overflow-hidden scroll-mt-32"
@@ -1130,7 +1133,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* 3. メッセージ */}
+              {/* 3. メッセージ ＋ プライバシーポリシー同意 */}
               <div className="space-y-2">
                 <label
                   htmlFor="message"
@@ -1138,6 +1141,7 @@ export default function Home() {
                 >
                   今感じていること・話してみたいこと（任意）
                 </label>
+
                 <textarea
                   name="message"
                   id="message"
@@ -1145,27 +1149,159 @@ export default function Home() {
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all resize-none"
                   placeholder="ざっくりで大丈夫です。書ける範囲でどうぞ。"
                 ></textarea>
+
+                {/* プライバシーポリシー同意（おしゃれ版） */}
+                <label className="group flex items-start gap-3 cursor-pointer select-none mt-1">
+                  {/* 機能用の隠しチェックボックス */}
+                  <input
+                    type="checkbox"
+                    name="privacyConsent"
+                    required
+                    checked={agreedPrivacy}
+                    onChange={(e) => setAgreedPrivacy(e.target.checked)}
+                    className="peer sr-only"
+                  />
+
+                  {/* 見た目用カスタムチェックボックス */}
+                  <div
+                    className="
+                      relative mt-[2px] flex-shrink-0 w-5 h-5
+                      border border-white/30 rounded
+                      bg-white/5 transition-all duration-300
+                      group-hover:border-white/70 group-hover:bg-white/10
+                      peer-checked:bg-white peer-checked:border-white
+                      peer-focus:ring-2 peer-focus:ring-white/30
+                    "
+                  >
+                    <svg
+                      className="w-full h-full text-[#223a5e] transition-transform duration-200 scale-0 peer-checked:scale-100"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
+
+                  {/* 説明テキスト＋リンク */}
+                  <span className="text-[11px] md:text-xs text-white/50 leading-relaxed group-hover:text-white/80 transition-colors">
+                    お申し込み内容の管理および返信のために、入力いただいた情報を利用することに同意します。
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsPrivacyOpen(true);
+                      }}
+                      className="ml-2 underline underline-offset-2 decoration-white/40 text-white/60 hover:text-white/90 hover:decoration-white transition-all"
+                    >
+                      プライバシーポリシーを表示
+                    </button>
+                  </span>
+                </label>
               </div>
 
+
+
               {/* Submit Button */}
-              <div className="pt-4">
+              <div className="mt-6">
                 <button
                   type="submit"
-                  className="group relative w-full inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-white font-bold text-[#223a5e] transition-all duration-300 hover:bg-[#e6e6e6] shadow-lg hover:shadow-white/20 hover:scale-[1.01]"
+                  disabled={!agreedPrivacy}
+                  className="group relative w-full inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-white font-bold text-[#223a5e] transition-all duration-300 hover:bg-[#e6e6e6] shadow-lg hover:shadow-white/20 hover:scale-[1.01] disabled:opacity-60 disabled:hover:scale-100 disabled:hover:shadow-none"
                 >
                   <span className="mr-2 text-lg">
                     無料で体験セッションを申し込む
                   </span>
                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </button>
-                <p className="text-center text-white/40 text-xs mt-4">
+                
+                <p className="text-center text-white/40 text-xs mt-3">
                   ※ 日時は、後ほどメールで調整します。今はざっくりでOKです。
                 </p>
               </div>
+
+
+
             </div>
           </form>
         </div>
       </section>
+
+      {/* --- Privacy Policy Modal --- */}
+      <AnimatePresence>
+        {isPrivacyOpen && (
+          <motion.div
+            className="fixed inset-0 z-[80] flex items-center justify-center bg-black/60 p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsPrivacyOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="relative max-w-3xl w-full max-h-[80vh] overflow-y-auto bg-white text-slate-800 rounded-2xl p-8 md:p-10 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* 閉じるボタン */}
+              <button
+                type="button"
+                onClick={() => setIsPrivacyOpen(false)}
+                className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <h2 className="text-center text-base md:text-lg tracking-[0.3em] font-semibold mb-8">
+                PRIVACY POLICY
+              </h2>
+
+              <div className="space-y-6 text-sm leading-relaxed text-slate-800">
+
+                <div>
+                  <h3 className="text-base font-semibold mb-2">プライバシーポリシー（簡易版）</h3>
+                  <p>
+                    ナカイマ伴走舎では、お問い合わせフォームでお預かりした個人情報を、
+                    <strong>「ご連絡・日程調整・サービス提供のため」</strong>
+                    に利用します。
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-base font-semibold mb-2">第三者提供について</h3>
+                  <p>
+                    法令で必要な場合を除き、第三者に提供することはありません。
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-base font-semibold mb-2">情報の管理について</h3>
+                  <p>
+                    取得した情報は、必要な期間のみ安全に管理し、不要になったものは適切に削除します。
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-base font-semibold mb-2">開示・訂正・削除のご請求</h3>
+                  <p>
+                    ご自身の情報の <strong>開示・訂正・削除</strong> を希望される場合は、
+                    お問い合わせフォームよりご連絡ください。
+                  </p>
+                </div>
+
+              </div>
+
+
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
 
       {/* --- Footer --- */}
       <footer
