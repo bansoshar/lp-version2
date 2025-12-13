@@ -553,7 +553,7 @@ export default function Home() {
       <section className="py-24 px-6 md:px-20 bg-[var(--color-paper-dark)]">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="font-display text-[#223a5e] text-lg tracking-widest uppercase mb-4 block opacity-60">
-            03 ― Target
+            03 ― For Those Who Are Here
           </span>
           <h2 className="font-serif text-2xl md:text-3xl text-[#223a5e] mb-4">
             その迷いは、次へ進む準備が始まっているサイン
