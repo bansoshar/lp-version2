@@ -514,7 +514,7 @@ export default function Home() {
                   思考の行き止まりに、前へ進む原動力が戻る場をつくります。
                 </p>
                 <p className="text-base text-gray-400 mt-4">
-                  Gallup® 認定ストレングスコーチ ／ CTI認定プロコーチ（CPCC）
+                  ICF認定コーチ（ACC）/ CTI認定プロコーチ（CPCC）/ Gallup® 認定ストレングスコーチ
                   <br />
                   Top 5: 親密性 / 自我 / 未来志向 / 戦略性 / 分析思考
                 </p>
