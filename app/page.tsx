@@ -357,7 +357,7 @@ export default function Home() {
             >
               <span className="inline-block">
               <br />
-              妥協できる願いなら、とっくに諦めているはずです。 その「重さ」は、あなたが人生を投げ出していない何よりの証拠。 頭で出した正解ではなく、 腹の底から頷ける決断を。
+              正論も、責任も、すべて背負って走ってきたあなたへ。足が止まるのは、大切にしたいものが、そこにあるとき。腹の底から頷ける決断へ。
               </span>
               <br className="hidden md:inline" />
               <span className="inline-block">
@@ -506,19 +506,35 @@ export default function Home() {
                 <span className="text-white/70 inline-phrase">良き理解者</span>
                 <span className="inline-phrase">であり続ける。</span>
               </h3>
-              <div className="space-y-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
-                <p>
-                  IT業界で多様な組織をマネジメントしてきたなかで、
-                  “人が決められなくなる瞬間”を見てきました。
-                  CTI認定プロコーチとしての深い洞察と飾らない対話で、
-                  思考の行き止まりに、前へ進む原動力が戻る場をつくります。
-                </p>
-                <p className="text-base text-gray-400 mt-4">
-                  ICF認定コーチ（ACC）/ CTI認定プロコーチ（CPCC）/ Gallup® 認定ストレングスコーチ
-                  <br />
-                  Top 5: 親密性 / 自我 / 未来志向 / 戦略性 / 分析思考
-                </p>
-              </div>
+                <div className="space-y-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
+                  <p>
+                    IT業界にて、海外拠点（中国）での組織立ち上げや、
+                    100名規模のマネジメントを経験。
+                    現在も現役のマネージャーとして、
+                    判断と責任の現場に立っています。
+                  </p>
+
+                  <p>
+                    重責を負うほど、
+                    一人で抱え込む時間は増えるもの。
+                    ここには利害関係も、社内の思惑もありません。
+                    ただの一人の人間として、
+                    思考を整理し、自分を取り戻すための場所を。
+                  </p>
+
+                  <p>
+                    同じように判断と責任の現場を知る立場として。
+                    CTIの対話とCliftonStrengths®の知見を活かし、
+                    思考の行き止まりに、前へ進む原動力が戻る場を提供します。
+                  </p>
+
+                  <p className="text-base text-gray-400 mt-4">
+                    ICF認定コーチ（ACC）/ CTI認定プロコーチ（CPCC）/ Gallup® 認定ストレングスコーチ
+                    <br />
+                    Top 5: 親密性 / 自我 / 未来志向 / 戦略性 / 分析思考
+                  </p>
+                </div>
+
 
               <div className="mt-12 flex flex-wrap gap-x-12 gap-y-6 border-t border-white/20 pt-8">
                 <div>
@@ -567,11 +583,11 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           {[
-            "周囲に合わせて生きてきたけれど、本当はどこかで“自分の声”が聴こえている",
+            "正論で説明しているはずなのに、手応えがない感覚が続いている",
+            "組織の成果を背負う立場で、メンバーの強みをどう活かせばいいか立ち止まっている",
             "今の働き方に不満はないけれど、説明できない違和感がずっと居座っている",
             "決めたいのに、最後の一歩でいつもブレーキがかかる",
             "自分らしく生きたいのに、誰かを傷つけないかと怖くて踏み出せない",
-            "「強み」を言われても、しっくりこない自分に密かにモヤモヤしている",
             "役職や立場上、弱音を見せられず、誰にも頼れないまま抱え込んでしまう",
           ].map((item, i) => (
             <motion.div
@@ -688,7 +704,7 @@ export default function Home() {
               <ul className="space-y-2 mb-8 font-serif text-gray-700">
                 <li className="flex items-center gap-3">
                   <Check size={16} className="text-[#223a5e]" />{" "}
-                  資質プロファイルの徹底分析
+                  資質プロファイルの徹底分析（強みの構造化）
                 </li>
                 <li className="flex items-center gap-3">
                   <Check size={16} className="text-[#223a5e]" />{" "}
@@ -723,7 +739,7 @@ export default function Home() {
               {
                 step: "02",
                 title: "体験セッション (30分)",
-                text: "オンライン（Zoom）にて、実際のコーチングを体験いただきます。現状の課題や、コーチとの相性をご確認ください。無理な勧誘は一切いたしません。",
+                text: "オンライン（Zoom）にて、実際のコーチングを体験いただきます。現状の課題や、コーチとの相性をご確認ください。無理な勧誘は一切いたしません。この場が「安全基地」になり得るかだけを確認してください。",
                 icon: Clock,
               },
               {
@@ -1037,9 +1053,9 @@ export default function Home() {
               <span className="inline-block">この瞬間に。</span>
             </motion.h2>
             <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-              まずは30分の無料体験セッションで、
+              思考の荷物を下ろし、 胸の奥で眠っていた“願いの輪郭”に触れてみてください。
               <br className="hidden md:inline" />
-              胸の奥で眠っていた“願いの輪郭”に触れてみてください。
+              まずは30分の無料体験セッションでお待ちしています。
             </p>
           </div>
 
