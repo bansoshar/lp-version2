@@ -845,20 +845,27 @@ export default function Home() {
           
           {/* Intro */}
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <p className="text-gray-500 leading-relaxed">
-                ライフコーチングは扱うテーマの性質上、
-                <span className="font-semibold text-slate-700">
-                  3ヶ月〜（全6回以上）の継続
-                </span>
-                でのみ承っています。
-                <br className="hidden md:inline" />
+            <p className="text-gray-500 leading-relaxed">
+              <span className="block mb-3 text-slate-600 font-medium">
 
-                ストレングスコーチングは、
-                単発でのご利用と継続のどちらにも対応しています。
-                <br className="hidden md:inline" />
+                本セッションは、<br className="hidden md:inline" />
+                判断と責任を一人で引き受けてきた方のための、個別伴走です。
+              </span>
 
-                マネージャー／リーダー向けの個別セッションにも対応しています。
-              </p>
+              ライフコーチングは扱うテーマの性質上、
+              <span className="font-semibold text-slate-700">
+                3ヶ月〜（全6回以上）の継続
+              </span>
+              でのみ承っています。
+              <br className="hidden md:inline" />
+
+              ストレングスコーチングは、
+              単発でのご利用と継続のどちらにも対応しています。
+              <br className="hidden md:inline" />
+
+              マネージャー／リーダー向けの個別セッションにも対応しています。
+            </p>
+
             </div>
 
 
