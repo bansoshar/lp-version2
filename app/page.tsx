@@ -357,7 +357,7 @@ export default function Home() {
             >
               <span className="inline-block">
               <br />
-              正論も、責任も、ちゃんと分かっている。それでも足が止まるのは、あなたが軽い決断をしたくないから。
+              正論も、責任も、ちゃんと分かっている。それでも足が止まる。軽い決断をしたくない感覚が、そこにある。
               </span>
               <br className="hidden md:inline" />
               <span className="inline-block">
