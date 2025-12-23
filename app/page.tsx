@@ -456,7 +456,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- Profile --- */}
+     {/* --- Profile --- */}
       <section
         id="profile"
         className="py-32 px-6 md:px-20 bg-[#223a5e] text-white overflow-hidden"
@@ -487,7 +487,7 @@ export default function Home() {
               <div className="absolute -top-6 -right-6 w-full h-full border border-white/30 z-[-1]" />
             </div>
 
-            <div className="md:col-span-7 md:col-start-1 md:row-start-1 z-20 mix-blend-lighten">
+            <div className="md:col-span-7 md:col-start-1 md:row-start-1 z-20">
               <div className="mb-6">
                 <p className="text-sm tracking-widest text-white/60 mb-2 font-display">
                   Representative / Coach
@@ -506,64 +506,44 @@ export default function Home() {
                 <span className="text-white/70 inline-phrase">良き理解者</span>
                 <span className="inline-phrase">であり続ける。</span>
               </h3>
-                <div className="space-y-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
-                  <p>
-                    IT業界にて、海外拠点（中国）での組織立ち上げや、
-                    100名規模のマネジメントを経験。
-                    現在も現役のマネージャーとして、
-                    判断と責任の現場に立っています。
-                  </p>
 
-                  <p>
-                    重責を負うほど、
-                    一人で抱え込む時間は増えるもの。
-                    ここには利害関係も、社内の思惑もありません。
-                    ただの一人の人間として、
-                    思考を整理し、自分を取り戻すための場所を。
-                  </p>
+              <div className="space-y-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
+                <p>
+                  IT業界にて、海外拠点（中国）の組織立ち上げや、
+                  100名規模のチームを率いる立場も経験し、
+                  15年以上、マネージャーとして組織とビジネスの判断に携わってきました。
+                  現在も判断と責任の現場に立ち続けています。
+                </p>
 
-                  <p>
-                    同じように判断と責任の現場を知る立場として。
-                    CTIの対話とCliftonStrengths®の知見を活かし、
-                    思考の行き止まりに、前へ進む原動力が戻る場を提供します。
-                  </p>
+                <p>
+                  重責を負うほど、
+                  一人で抱え込む時間は増えるもの。
+                  ここには利害関係も、社内の思惑もありません。
+                  ただの一人の人間として、
+                  思考を整理し、自分を取り戻すための場所を。
+                </p>
 
-                  <p className="text-base text-gray-400 mt-4">
-                    ICF認定コーチ（ACC）/ CTI認定プロコーチ（CPCC）/ Gallup® 認定ストレングスコーチ
-                    <br />
-                    Top 5: 親密性 / 自我 / 未来志向 / 戦略性 / 分析思考
-                  </p>
-                </div>
+                <p>
+                  同じように判断と責任の現場を知る立場として、
+                  CTIの対話とCliftonStrengths®の知見を活かし、
+                  思考の行き止まりに、前へ進む原動力が戻る場を提供します。
+                </p>
+              </div>
 
-
-              <div className="mt-12 flex flex-wrap gap-x-12 gap-y-6 border-t border-white/20 pt-8">
-                <div>
-                  <div className="text-white font-display text-4xl">165+</div>
-                  <div className="text-sm tracking-wider opacity-60 mt-1 uppercase">
-                    Life Coaching Hours
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-white font-display text-4xl">180+</div>
-                  <div className="text-sm tracking-wider opacity-60 mt-1 uppercase">
-                    Strengths Hours
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-white font-display text-4xl">
-                    Certified
-                  </div>
-                  <div className="text-sm tracking-wider opacity-60 mt-1 uppercase">
-                    Global Standard
-                  </div>
-                </div>
+              {/* --- Credentials (quiet / footnote style) --- */}
+              <div className="mt-10 border-t border-white/20 pt-6 max-w-2xl space-y-2">
+                <p className="text-base text-white/70 leading-relaxed">
+                  ICF認定コーチ（ACC）/ CTI認定プロコーチ（CPCC）/ Gallup® 認定ストレングスコーチ
+                </p>
+                <p className="text-sm text-white/50">
+                  Top 5: 親密性 / 自我 / 未来志向 / 戦略性 / 分析思考
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* --- Recommends (Target) --- */}
       <section className="py-24 px-6 md:px-20 bg-[var(--color-paper-dark)]">
@@ -943,12 +923,14 @@ export default function Home() {
                     <p>
                       ライフコーチングをご契約いただいた日から30日間は、
                       <br className="hidden md:inline" />
-                      安心して変化のプロセスを試していただける期間としています。
+                      安心して変化のプロセスに向き合っていただく
+                      <br className="hidden md:inline" />
+                      期間としています。
                     </p>
                     <p>
-                      セッションでは、その方の状況に応じて
+                      この期間の中で、セッションではその方の状況に応じて、
                       <br className="hidden md:inline" />
-                      次のような「変化の入口」となるテーマを扱います：
+                     次のような 「変化の入口」となるテーマを扱います：
                     </p>
                   </div>
 
@@ -998,7 +980,7 @@ export default function Home() {
                   
                   <p className="text-xs text-slate-400 mt-5 text-center leading-relaxed px-4">
                     ※この保証は、ご自身の人生に主体的に向き合う方が、<br className="hidden md:inline"/>
-                    安心して一歩を踏み出すための仕組みです。
+                    安心して最初の一歩を踏み出すための仕組みです。
                   </p>
                 </div>
 
@@ -1237,7 +1219,7 @@ export default function Home() {
                   className="group relative w-full inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-white font-bold text-[#223a5e] transition-all duration-300 hover:bg-[#e6e6e6] shadow-lg hover:shadow-white/20 hover:scale-[1.01] disabled:opacity-60 disabled:hover:scale-100 disabled:hover:shadow-none"
                 >
                   <span className="mr-2 text-lg">
-                    無料で体験セッションを申し込む
+                    対話を予約する（無料）
                   </span>
                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </button>
