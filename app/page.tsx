@@ -357,7 +357,7 @@ export default function Home() {
             >
               <span className="inline-block">
               <br />
-              正論も、責任も、すべて背負って走ってきたあなたへ。足が止まるのは、大切にしたいものが、そこにあるとき。腹の底から頷ける決断へ。
+              正論も、責任も、ちゃんと分かっている。それでも足が止まるのは、あなたが軽い決断をしたくないから。
               </span>
               <br className="hidden md:inline" />
               <span className="inline-block">
@@ -381,7 +381,7 @@ export default function Home() {
         <div className="w-full md:w-1/2 h-[50vh] md:h-full relative">
           <ParallaxImage
             src="/hero.jpg"
-            alt="Calm Ocean"
+            alt=""
             className="object-[80%_center]"
             speed={0.5}
           />
@@ -583,12 +583,12 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           {[
-            "正論で説明しているはずなのに、手応えがない感覚が続いている",
-            "組織の成果を背負う立場で、メンバーの強みをどう活かせばいいか立ち止まっている",
-            "今の働き方に不満はないけれど、説明できない違和感がずっと居座っている",
-            "決めたいのに、最後の一歩でいつもブレーキがかかる",
-            "自分らしく生きたいのに、誰かを傷つけないかと怖くて踏み出せない",
-            "役職や立場上、弱音を見せられず、誰にも頼れないまま抱え込んでしまう",
+            "正論で説明しているはずなのに、現場が動いていく実感がない",
+            "組織の成果を背負う立場で、メンバーの強みをどう活かせば前に進めるのか、判断に迷っている",
+            "役職や立場上、判断に迷っていることを、誰にも相談できない",
+            "決めたいとは思っているのに、最後の一手で、判断を先送りしてしまう",
+            "今の働き方に大きな不満はないのに、このままでいいのかという違和感が残っている",
+            "自分の考えで進みたいのに、周囲への影響を考えて、踏み出せずにいる",
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -640,7 +640,7 @@ export default function Home() {
                 </span>
               </h3>
               <p className="text-gray-600 leading-loose mb-8">
-                「どうすべきか」ではなく「どう在りたいか」。正解のない問いに対して、あなたの内側にある願いを探求します。
+                判断の前で立ち止まったとき、「自分は何を基準に選びたいのか」を取り戻すための対話です。正解のない問いに対して、あなたの内側にある願いを探求します。
                 仕事、人間関係、ライフワーク。人生のあらゆる局面で、納得感のある選択をするための土台をつくります。
               </p>
               <ul className="space-y-2 mb-8 font-serif text-gray-700">
@@ -686,8 +686,8 @@ export default function Home() {
                 </span>
               </h3>
               <p className="text-gray-600 leading-loose mb-8">
-                <span className="inline-phrase">「才能」は、磨かなければ</span>
-                <span className="inline-phrase">ただの「癖」です。</span>
+                <span className="inline-phrase">判断やマネジメントが重くなる理由を、</span>
+                <span className="inline-phrase">自分の“強みの使い方”から整理していくコーチングです。</span>
                 <br />
                 <span className="inline-phrase">
                   Gallup社の診断ツールを用いて、あなたの才能を客観的に分析。
