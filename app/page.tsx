@@ -525,8 +525,8 @@ export default function Home() {
 
                 <p>
                   同じように判断と責任の現場を知る立場として、
-                  CTIの対話とCliftonStrengths®の知見を活かし、
-                  思考の行き止まりに、前へ進む原動力が戻る場を提供します。
+                  思考の詰まりをほどく対話とCliftonStrengths®の知見を活かし、
+                  行き止まりに立った感覚から、前へ進む原動力が戻る場を提供します。
                 </p>
               </div>
 
