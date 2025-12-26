@@ -1019,18 +1019,19 @@ export default function Home() {
                       </span>
                       と感じ、継続を望まれない場合は、
                     </p>
+                      <p>
+                        その時点で契約を終了できます。
+                      </p>
                     <div className="mt-4 pt-4 border-t border-slate-100">
                       <p className="font-semibold text-slate-800">
-                        その月のセッション料金はいただきません。
-                      </p>
-                      <p className="text-sm text-slate-500 mt-1">
-                        契約もその場で終了できます。
+                        その期間のセッション料金もいただきません。
                       </p>
                     </div>
                   </div>
                   
-                  <p className="text-xs text-slate-400 mt-5 text-center leading-relaxed px-4">
-                    ※この保証は、ご自身の人生に主体的に向き合う方が、<br className="hidden md:inline"/>
+                  <p className="text-xs text-slate-400 mt-5 leading-relaxed px-4 text-left">
+                    ※この保証は、ご自身の人生に主体的に向き合う方が、
+                    <br className="hidden md:inline" />
                     安心して最初の一歩を踏み出すための仕組みです。
                   </p>
                 </div>
