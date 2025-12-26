@@ -815,91 +815,142 @@ export default function Home() {
 
 
 {/* --- Pricing --- */}
-      <section
-        id="pricing"
-        className="py-32 px-6 md:px-20 bg-[var(--color-paper-light)]"
-      >
-        <SectionHeader en="07 ― Pricing" jp="料金について" />
+<section
+  id="pricing"
+  className="py-32 px-6 md:px-20 bg-[var(--color-paper-light)]"
+>
+  <SectionHeader en="07 ― Pricing" jp="料金について" />
 
-        <div className="max-w-5xl mx-auto -mt-16">
-          
-          {/* Intro */}
-            <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-gray-500 leading-relaxed">
-              <span className="block mb-3 text-slate-600 font-medium">
+  <div className="max-w-5xl mx-auto -mt-16">
 
-                本セッションは、<br className="hidden md:inline" />
-                判断と責任を一人で引き受けてきた方のための、個別伴走です。
-              </span>
+    {/* Intro */}
+    <div className="max-w-4xl mx-auto text-center mb-16">
+      <p className="text-gray-500 leading-relaxed">
+        <span className="block mb-3 text-slate-600 font-medium">
+          本セッションは、<br className="hidden md:inline" />
+          判断と責任を一人で引き受けてきた方のための、個別伴走です。
+        </span>
 
-              ライフコーチングは扱うテーマの性質上、
-              <span className="font-semibold text-slate-700">
-                3ヶ月〜（全6回以上）の継続
-              </span>
-              でのみ承っています。
-              <br className="hidden md:inline" />
+        ライフコーチングは扱うテーマの性質上、
+        <span className="font-semibold text-slate-700">
+          3ヶ月〜（全7回以上）の継続
+        </span>
+        でのみ承っています。
+        <br className="hidden md:inline" />
 
-              ストレングスコーチングは、
-              単発でのご利用と継続のどちらにも対応しています。
-              <br className="hidden md:inline" />
+        ストレングスコーチングは、
+        単発でのご利用と継続のどちらにも対応しています。
+        <br className="hidden md:inline" />
+      </p>
+    </div>
 
-              マネージャー／リーダー向けの個別セッションにも対応しています。
-            </p>
+    {/* Pricing cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 
-            </div>
+      {/* Life Coaching */}
+      <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
+        <h3 className="text-lg font-semibold tracking-wide text-[#223a5e] mb-3">
+          ライフコーチング
+        </h3>
+        <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
+          LIFE COACHING
+        </p>
+        <p className="text-2xl font-semibold text-[#223a5e] mb-2">
+          3ヶ月伴走（全7回） ¥105,000
+        </p>
+        <p className="text-xs text-slate-400 mb-6">
+          ※初回導入セッション120分＋継続セッション60分×6回
+        </p>
+        <ul className="space-y-3 text-sm text-slate-700 flex-grow">
+          <li>・判断の前に立ち止まり、本音と向き合う対話を行います。</li>
+          <li>・思考のクセに気づき、「自分の基準」で選べる状態を整えます。</li>
+          <li>・日常の判断や行動に、変化が静かに積み重なっていきます。</li>
+          <li>・ご契約の安心保証（下記参照）</li>
+        </ul>
+      </div>
+
+      {/* Strengths Coaching */}
 
 
-          {/* Pricing cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            
-            {/* Life Coaching */}
-            <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
-              <h3 className="text-lg font-semibold tracking-wide text-[#223a5e] mb-3">
-                ライフコーチング
-              </h3>
-              <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
-                LIFE COACHING
-              </p>
-              <p className="text-2xl font-semibold text-[#223a5e] mb-2">
-                1回（60分） ¥15,000
-              </p>
-              <p className="text-xs text-slate-400 mb-6">
-                ※初回の導入セッションのみ120分／同料金で実施します。
-              </p>
-              <ul className="space-y-3 text-sm text-slate-700 flex-grow">
-                <li>・2〜3週間に1回のペースが目安です。</li>
-                <li>・理想の人生像を一緒に描き、その解像度を高めていきます。</li>
-                <li>・思考のクセに気づき、「自分の声」で進める基盤を整えます。</li>
-                <li>・自分の声で選べる状態へ整えていきます。</li>
-                <li>・ご契約の安心保証（下記参照）</li>
-              </ul>
-            </div>
+      <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
+        <h3 className="text-lg font-semibold tracking-wide text-[#223a5e] mb-3">
+          ストレングスコーチング
+        </h3>
 
-            {/* Strengths Coaching */}
-            <div className="bg-white p-8 md:p-10 shadow-sm border border-slate-100 rounded-xl flex flex-col h-full">
-              <h3 className="text-lg font-semibold tracking-wide text-[#223a5e] mb-3">
-                ストレングスコーチング
-              </h3>
-              <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
-                STRENGTHS COACHING
-              </p>
-              <p className="text-2xl font-semibold text-[#223a5e] mb-2">
-                1回（60〜90分） ¥15,000
-              </p>
-              <p className="text-xs text-slate-400 mb-6">
-                ※単発／継続どちらの形でもご利用いただけます。
-              </p>
-              <ul className="space-y-3 text-sm text-slate-700 flex-grow">
-                <li>・プロファイリングセッション（約90分）</li>
-                <li>・ストレングスコーチング（約60分）</li>
-                <li>・3ヶ月〜（全6回以上）の継続も可能です。</li>
-                <li className="pl-4 text-slate-500 text-xs">
-                  - プロファイリング＋Gallupツール＋強み活用支援
-                </li>
-                <li>・強みを基点にした1on1設計やメンバー支援にも対応します。</li>
-              </ul>
-            </div>
-          </div>
+        {/* Header（左カードと階層を揃える） */}
+        <h3 className="text-sm uppercase tracking-widest text-slate-400 mb-3">
+          STRENGTHS REFRAMING
+        </h3>
+
+        <p className="text-2xl font-semibold text-[#223a5e] mb-2">
+          強みの再定義と実務適用　¥115,000
+        </p>
+
+        <p className="text-xs text-slate-400 mb-6">
+          マネージャーとしての意思決定を扱います
+        </p>
+
+
+{/* Breakdown */}
+<div className="space-y-2 text-sm text-slate-700 mb-6">
+  <div className="flex justify-between">
+    <span>
+      資質プロファイリング
+      <span className="text-xs text-slate-400 ml-1">（90分）</span>
+    </span>
+    <span className="font-semibold text-[#223a5e]">¥15,000</span>
+  </div>
+
+  <div className="flex justify-between">
+    <span>
+      ストレングス再定義セッション
+      <span className="text-xs text-slate-400 ml-1">（60分 × 5回）</span>
+    </span>
+    <span className="font-semibold text-[#223a5e]">¥100,000</span>
+  </div>
+
+  <p className="text-xs text-slate-500 mt-2">
+    ※プロファイリングを土台として進めます
+  </p>
+</div>
+
+
+        {/* Short Description */}
+        <p className="text-sm text-slate-600 leading-relaxed mb-6">
+          判断の背景にある思考と行動のつながりを捉え直し、<br />
+          チームを動かす一手を、自分の確信で選び直すための対話です。
+        </p>
+
+        {/* Details */}
+        <details className="group mt-auto">
+          <summary className="text-sm text-[#223a5e] font-medium underline cursor-pointer list-none mb-4">
+            この対話で扱うことを見る ▸
+          </summary>
+
+          <p className="text-sm text-slate-600 leading-relaxed">
+            マネージャーとしての判断軸と、<br />
+            意思決定が鈍る「ボトルネック」はどこにあるのか。<br /><br />
+
+            CliftonStrengths®を一つの指標として、<br />
+            無意識に起きている思考と行動のつながりを捉え直していきます。
+            <br /><br />
+
+            自分の行動原理がロジカルに腹落ちすることで、<br />
+            迷いや躊躇がほどけ、<br />
+            <strong>次の一手を「自分の確信」で選び、行動に移せる軸</strong>が整っていきます。
+            <br /><br />
+
+            その変化は、マネージャー自身だけでなく、<br />
+            <strong>
+              メンバーとの関わり方や、チームの動きにも波及していきます。
+            </strong>
+          </p>
+        </details>
+
+      </div>
+    </div>
+
+
 
 {/* Guarantee Section */}
           <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 md:p-12 relative overflow-hidden group">
@@ -968,18 +1019,19 @@ export default function Home() {
                       </span>
                       と感じ、継続を望まれない場合は、
                     </p>
+                      <p>
+                        その時点で契約を終了できます。
+                      </p>
                     <div className="mt-4 pt-4 border-t border-slate-100">
                       <p className="font-semibold text-slate-800">
-                        その月のセッション料金はいただきません。
-                      </p>
-                      <p className="text-sm text-slate-500 mt-1">
-                        契約もその場で終了できます。
+                        その期間のセッション料金もいただきません。
                       </p>
                     </div>
                   </div>
                   
-                  <p className="text-xs text-slate-400 mt-5 text-center leading-relaxed px-4">
-                    ※この保証は、ご自身の人生に主体的に向き合う方が、<br className="hidden md:inline"/>
+                  <p className="text-xs text-slate-400 mt-5 leading-relaxed px-4 text-left">
+                    ※この保証は、ご自身の人生に主体的に向き合う方が、
+                    <br className="hidden md:inline" />
                     安心して最初の一歩を踏み出すための仕組みです。
                   </p>
                 </div>
