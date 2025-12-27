@@ -887,7 +887,7 @@ export default function Home() {
         </p>
 
         <p className="text-xs text-slate-400 mb-6">
-          マネージャーとしての意思決定を扱います
+          マネージャーとしての意思決定を支えます
         </p>
 
 
